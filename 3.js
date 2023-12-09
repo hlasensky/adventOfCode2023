@@ -1,7 +1,7 @@
 import reader from "./reader.js";
 
 let arr = reader("./3.txt");
-
+arr = arr.split("");
 const maskOne = [
 	[-1, +1],
 	[0, +1],
@@ -16,8 +16,7 @@ const maskOne = [
 const res = [];
 let nm = "";
 let isValid = [];
-let gearArr = []
-
+let gearArr = [];
 
 arr.forEach((line, lineIndex) => {
 	line.forEach((char, charIndex) => {
@@ -65,8 +64,8 @@ gearArr = gearArr.map((item, ind) => {
 let cnt = 0;
 let cntG = 0;
 res.forEach((item) => (cnt += item));
-gearArr = gearArr.map((item) => item.filter(nm => nm));
+gearArr = gearArr.map((item) => item.filter((nm) => nm));
 
-gearArr.forEach((item) => Number(cntG += item[0] ? item[0] : 0));
+gearArr.forEach((item) => Number((cntG += item[0] ? item[0] : 0)));
 console.log(cnt);
-console.log(cntG/2);
+console.log(cntG / 2);

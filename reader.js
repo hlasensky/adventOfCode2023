@@ -4,7 +4,7 @@ const reader = (path) => {
 	const file = fs.readFileSync(path, "utf-8");
 
 
-	return file.split("\n").map(item => item.replace("\r", "").split(""))
+	return file.split("\n").map(item => item.replace("\r", ""))
 };
 
 export default reader
